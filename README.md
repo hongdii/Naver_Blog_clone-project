@@ -1,6 +1,6 @@
-# Naver_Blog_clone-project
+# Naver Blog clone - project
 
-*류준하, 오현지*
+*조원 : 류준하, 오현지*
 
 <h2>[메인 페이지]</h2>
 
