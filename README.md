@@ -1,7 +1,7 @@
 # Naver Blog clone - project
 
 *조원 : 류준하, 오현지*
-<br>
+<br><br>
 <h2>[개발 환경]</h2>
 <div>
 	<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white">
