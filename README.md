@@ -1,6 +1,6 @@
 # Naver Blog clone - project
 
-*조원 : 류준하, 오현지*
+*조원 : 류준하, 오현지(메인 페이지)*
 <br><br>
 <h2>[개발 환경]</h2>
 <div>
