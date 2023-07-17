@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+<style>
+    /* 1200px*1000px */
+    div{
+        /* border: 1px solid red; */
+        box-sizing: border-box;
+    }
+    .wrap{
+        width: 1200px;
+        height: 1800px;
+        margin: auto;
+    }
+
+    #header{
+        width: 100%;
+        height: 10%;
+        vertical-align: middle;
+    }
+    #h1{
+        height: 33%;
+        text-align: right;
+    }
+    #h1>a, #h2>a, #h3>a, #editName>a, #soge, #p1>a, #h3>div>a, #m1>a, #m2>a, #f1>a, #a1, #a2, #a3{
+        text-decoration: none;
+        color: black;
+        margin: 5px;
+        font-size: 12px;
+        vertical-align: middle;
+    }
+    #dd{
+        /* position: absolute; */
+        top: 15px;
+    }
+    #h1>div{
+        float: right;
+        margin: 0px;
+    }
+    #h2{
+        height: 34%;
+    }
+    #h2>a{
+        font-weight: 900;
+    }
+    #h3{
+        height: 33%;
+    }
+    #h3>a, #h3>div>a{
+        font-weight: bolder;
+
+    }
+    #h3>div{
+        float: right;
+    }
+    #content{
+        width: 100%;
+        display: inline-flex;
+    }
+    #c_left{
+        height: 100%;
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        vertical-align: middle;
+    }
+    #c_right{
+        height: 100%;
+        width: 100%;
+        vertical-align: middle;
+        display: flex;
+        flex-direction: column;
+    }
+    #profile{
+        width: 100%;
+        height: 40%;
+    }
+    #photo>a>img{
+        margin: 0px 15px;
+    }
+    #name, #write, #pf{
+        color: black;
+        margin: 5px;
+        font-size: 15px;
+        vertical-align: middle;
+        font-weight: 900;
+        text-decoration: none;
+    }
+
+    #editName, #edit2>img, #p1{
+        position: relative;
+    }
+    #editName>a{
+        color: gray;
+    }
+    #soge{
+        font-size: 13px;
+    }
+    #edit, #edit2, #go_profile{
+        position: absolute;
+    }
+    #p1>a, #m1>a, #m2>a{
+        color: slategrey;
+        font-weight: 900;
+    }
+    #pf{
+        font-weight: 500;
+    }
+    #category{
+        width: 100%;
+        height: 20%;
+    }
+    #c1_ul, #c1_ul2{
+        list-style-type: none;
+        padding: 0;
+        margin: 10px 10px;
+        font-size: 15px;
+        font-weight: 900;
+        color: #5d3b1a;
+    }
+    #c1_ul>li>a{
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+        vertical-align: middle;
+    }
+    #c1_ul2{
+        margin: 20px 10px;
+    }
+
+    #friend{
+        width: 100%;
+        height: 40%;
+    }
+    #moklok{
+        display: flex;
+        justify-content: space-between;
+    }
+    #m1{
+        margin-left: 15px;
+        text-decoration: none;
+        color: black;
+        margin: 5px;
+        font-size: 12px;
+        vertical-align: middle;
+        color: gray;
+        font-weight: 900;
+    }
+
+    #m2{
+        margin-right: 15px;
+    }
+
+    #t1{
+        font-size: 16px;
+        font-weight: 800;
+        color: lightgrey;
+        margin-top: 40px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+    #t2{
+        font-size: 32px;
+        font-weight: 800;
+        color: #37A831;
+        margin-left: 30px;
+        margin-bottom: 40px;
+    }
+    #t3, #foot{
+
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #t4, #f1{
+        margin-left: 30px;
+    }
+    #t4>a{
+        text-decoration: none;
+        color: #706b6b;
+        font-size: 14px;
+        vertical-align: middle;
+        
+    }
+    #t7{
+        color: #8A837E;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+    
+    #t8>a, #t8>span>a{
+        text-decoration: none;
+        color: #8A837E;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+    #con{
+        margin: 40px 30px 60px 30px;
+    }
+    #con>span{
+        font-size: 16px;
+        text-shadow: 0px 0px 10px orange;
+    }
+    #hangle{
+        font-weight: 900;
+        text-shadow: none;
+    }
+    #c3{
+        text-shadow: 0px 0px 10px rgb(10, 55, 97);
+        font-weight: 900;
+        color: white;
+    }
+    #con>#c5, #con>#c6, #con>#c7{
+        text-shadow: 0px 0px 10px skyblue;
+    }
+    #f1>a, #a1, #a2, #a3{
+        border: 1px solid lightgray;;
+        box-sizing: border-box; 
+        color: gray;
+    }
+    #f1, #f2{
+        display: flex;
+    }
+    #f1>a{
+        width: 100px;
+        height: 25px;
+        padding-top: 2px;
+    }
+    #heart{
+        padding-left: 10px;
+    }
+    #reply{
+        background: url(image/댓글.PNG) no-repeat;
+        padding-left: 22px;
+    }
+    #f2>#a1, #f2>#a2, #f2>#a3{
+        width: 40px;
+        height: 30px;
+        margin: 0px 0px;
+        margin-top: 5px;
+        padding: 5px 6px;
+    }
+    #f2>a>img{
+        margin: 5px;
+    }
+    #profile{
+        border: 1px solid #37A831;
+        border-top: 5px solid #37A831;
+        padding: 5px;
+    }
+    #moklok{
+        border: 1px solid lightgray;
+        padding: 10px;
+    }
+    #c_right{
+        border: 1px solid lightgray;
+        border-top: 5px solid #37A831;
+        padding: 10px;
+    }
+    #t3{
+        border-bottom: 1px solid lightgray;
+    }
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="header">
+            <div id="h1">
+                <a href="">이웃블로그</a>|
+                <a href="">블로그 홈</a>|
+                <a href="">내 메뉴<img id="dd" src="resources/image/arrow_drop_down.png">
+                </a>|
+                <a href="">작성자<img id="dd" src="resources/image/arrow_drop_down.png">
+                </a>
+                <div><img id="menu" src="resources/image/menu.PNG"></div>
+
+            </div>
+            <div id="h2"><a href="">작성자님의블로그</a></div>
+            <div id="h3">
+                <a href="">프롤로그</a>|
+                <a href="">블로그</a>
+                <div id="h3_right">
+                    <a href="">지도</a>|
+                    <a href="">서재</a>|
+                    <a href="">안부</a>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="c_left">
+                <div id="profile">
+                    <div id="photo"><a href=""><img src="resources/image/profile.jpg" width="150" height="150"></a></div>
+                    <div id="name">작성자</div>
+                    <div id="editName">
+                        <a href="">작성자
+                            <img id="edit" src="resources/image/edit.PNG">
+                        </a>
+                    </div>
+                    <div id="soge">안녕하세요! 작성자입니다. 행복한 하루되세요^^
+                        <a href="" id="edit2"><img src="resources/image/edit2.PNG" id="edit2_png" width="30"></a>
+                    </div>
+                    <div id="p1">
+                        <a href="" id="p1a">프로필
+                            <img src="resources/image/go_profile.PNG" id="go_profile">
+                        </a>
+                    </div>
+                    <div id="p2">
+                        <a id="write" href=""><img src="resources/image/write.PNG">글쓰기</a>
+                        <a id="pf" href="웹페이지구현_toy.html"><img src="resources/image/pf.PNG">관리·통계</a>
+                    </div>
+                </div>
+                <div id="category">
+                    <div id="c1">
+                        <ul id="c1_ul">카테고리
+                            <li><a href=""><img src="resources/image/문서모양.PNG">전체보기</a>
+                                <a href=""><img id="edit3" src="resources/image/edit3.PNG"></a></li>
+                            <li><a href=""><img src="resources/image/문서모양.PNG">게시판</a></li>
+                        </ul>
+                        <ul id="c1_ul2">최근댓글</ul>
+                    </div>
+                </div>
+                <div id="friend"></div>
+            </div>
+                <!-- <div id="widget"></div> -->
+            <div id="c_right">
+                <div id="moklok">
+                    <div id="m1">
+                        <a href="">전체보기</a> 1개의 글
+                    </div>
+                    <div id="m2"><a href="">목록열기</a></div>
+                </div>
+                <div id="title">
+                    <div id="t1">게시판</div>
+                    <div id="t2">오늘 하루</div>
+                    <div id="t3">
+                        <div id="t4">
+                            <a href=""><img src="resources/image/profile-modified.png" id="t5" width="30"></a>
+                            <a href="">작성자</a>
+                            <span id="t7">2023.1.11.14:14</span>
+                        </div>
+                        <div id="t8">
+                            <a href="">URL 복사</a>
+                            <a id="t8_a2" href=""><img src="resources/image/통계.PNG">통계</a>
+                            <img src="resources/image/update_delete.PNG">
+                        </div>
+                    </div>
+                </div>
+                <div id="con">
+                    <img src="resources/image/happyNY.jpg"><br><br>
+                    <span id="c1">안녕하세요. 벌써 새해가 된지도 2주가 다 되어가네요.
+                        <br>저는 현재 수강하는 강의가 11월 4일에 개강하여 학원에 다닌지 두달이 지났습니다.
+                    </span>
+                    <br><br>
+                    <span id="c2">Java와 Oracle, 그리고 HTML과 CSS까지..! 두달만에 어느덧 이렇게 많은 웹 개발 지식을 얻게 되었어요ㅎㅎ<br>
+                        선생님께서 강의 중 <span id="hangle">한글입숨</span>이라는 사이트를 알려주셨습니다.<br><br> 무의미한 한글 텍스트 생성기인데, 웹 개발시 유용하게 사용될 듯 합니다.
+                    </span><br><br>
+                    <a id="c3" href="http://hangul.thefron.me/">한글입숨 바로가기</a><br>
+                    <span id="c4">한글 입숨 링크는 위 '한글입숨 바로가기'를 눌러 이동할 수 있습니다.</span><br>
+                    <br>
+                    <span id="c5">크고 맺어, 소금이라 것이다. 부패를 목숨이 못할 거선의 새 발휘하기 바이며, 구하기 수 약동하다. 사는가 일월과 거선의 인생에 무엇이 이상을 있을 작고 같으며, 교향악이다. 불어 있는 인간의 얼음과 모래뿐일 있다. 만물은 그들의 심장의 피고, 끝에 속에 싸인 충분히 뿐이다. 소담스러운 끓는 무한한 사랑의 몸이 너의 있을 목숨이 운다. 품으며, 따뜻한 석가는 그들의 만천하의 고동을 것이다. 어디 하는 찾아 피고 것이다. 인간의 곳으로 유소년에게서 할지니, 속에 속에서 것은 가는 밥을 것이다. 사라지지 못할 인간의 이것이다. 커다란 따뜻한 위하여 쓸쓸하랴?
+                    </span>
+                    <br><br>
+                    <span id="c6">싸인 우리 눈에 철환하였는가? 같은 열락의 소리다.이것은 안고, 과실이 천고에 보라. 용감하고 싸인 그들은 갑 이것이다. 동력은 황금시대의 그들을 봄바람이다. 이상, 되려니와, 피부가 것이다. 있음으로써 앞이 설산에서 든 있는가? 무엇을 봄바람을 청춘의 역사를 인간에 청춘의 인생에 말이다. 그들은 이상이 역사를 동산에는 밝은 부패뿐이다. 피에 대중을 피가 사랑의 싶이 구하지 고동을 칼이다. 청춘에서만 너의 청춘은 이는 있으며, 보라. 아름답고 그들은 끝에 가슴에 그들의 부패뿐이다.
+                    </span>
+                    <br><br>
+                    <span id="c7">노년에게서 평화스러운 청춘 철환하였는가? 뜨고, 쓸쓸한 때까지 가진 싹이 위하여, 때문이다. 용감하고 긴지라 뛰노는 방황하여도, 바이며, 끓는 끝에 불어 있으랴? 시들어 대고, 생명을 있으랴? 것은 우리 들어 보이는 인생의 과실이 이것이다. 되려니와, 광야에서 거선의 이상이 가는 이상을 청춘을 청춘 그리하였는가? 인류의 충분히 남는 살았으며, 사랑의 듣기만 그러므로 뭇 사막이다. 못할 몸이 용감하고 이상이 것은 하는 갑 것은 칼이다. 전인 꽃이 유소년에게서 가는 그들은 우리 것이다. 희망의 거친 불러 풀이 천고에 때문이다.
+                    </span>
+                    <br><br>
+                    <span id="c8">위 3문단은 한글 입숨 사이트에서 문단 수는 '3문단', 문단 길이는 '길게', 텍스트 소스는 '청춘예찬'을 적용하여 생성한 텍스트입니다.</span>
+                    <br><br>
+                    <span id="c9">앞으로 열심히 강의 수강하고 복습한 후, 이를 응용할 수 있는 웹 개발자가 되고싶습니다.</span>
+                    <br>
+                    <span id="c10">오늘도 행복한 하루 되세요!! ^^</span>
+                </div>
+                <div id="foot">
+                    <div id="f1">
+                        <a href="" id="heart">♥ 공감</a>
+                        <a href="" id="reply">댓글 쓰기</a>
+                    </div>
+                    <div id="f2">
+                        <a href=""><img src="resources/image/600px-네이버카페_로고.png" width="30"></a>
+                        <a hreg=""><img src="resources/image/keep.PNG" width="30"></a>
+                        <a hreg=""><img src="resources/image/memo.PNG" width="30"></a>
+                        <a hreg=""><img src="resources/image/보내기.PNG" width="33" height="30"></a>
+                        <a id="a1" href="">수정</a>
+                        <a id="a2" href="">삭제</a>
+                        <a id="a3" href="">설정</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
