@@ -3,7 +3,11 @@
 *조원 : 류준하, 오현지*
 <br>
 <h2>[개발 환경]</h2>
-<p></p>
+<div>
+	<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white">
+	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white">
+  
+</div>
 <br>
 <h2>[메인 페이지]</h2>
 
