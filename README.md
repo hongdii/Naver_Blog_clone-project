@@ -11,8 +11,8 @@
 <br>
 <h2>[메인 페이지]</h2>
 
-![mainPage](https://github.com/hongdii/Naver_Blog_clone-project/assets/93081185/a8ace756-34bf-4bc5-8231-a10ab3ffba27)
-
+![mainPage](https://github.com/hongdii/Naver_Blog_clone-project/assets/93081185/9093cbe4-a598-4407-97ec-a328a0fc4e28)
+![mainPage2](https://github.com/hongdii/Naver_Blog_clone-project/assets/93081185/6b434c54-6d79-44ae-8242-9280a4e8120f)
 
 
 <h2>[]</h2>
